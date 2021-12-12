@@ -5,7 +5,7 @@
 
 {% block description %}
 Latest block: {% if blocks %}{%  with blocks|first as last_block %}{{ last_block.height }}{% endwith %}{% endif %}
-Network Difficult: {% if blocks %}{%  with blocks|first as last_block %}{{ last_block.base_target|net_diff|floatformat:2|intcomma }} TB{% endwith %}{% endif %}
+Network Difficulty: {% if blocks %}{%  with blocks|first as last_block %}{{ last_block.base_target|net_diff|floatformat:2|intcomma }} PiB{% endwith %}{% endif %}
 {% endblock %}
 
 {% block revision %}{{ last_block.height }}{% endblock %}
@@ -63,10 +63,10 @@ Network Difficult: {% if blocks %}{%  with blocks|first as last_block %}{{ last_
             <hr class="hr-space-lg">
             <div class="media align-items-center">
               <div class="text-left">
-                <h6 class="text-uppercase text-secondary mb-0">Network Difficult</h6>
+                <h6 class="text-uppercase text-secondary mb-0">Network Difficulty</h6>
                 {% if blocks %}
                   {%  with blocks|first as last_block %}
-                    <span class="text-info small">{{ last_block.base_target|net_diff|floatformat:2|intcomma }} TB</span>
+                    <span class="text-info small">{{ last_block.base_target|net_diff|floatformat:2|intcomma }} PiB</span>
                   {% endwith %}
                 {% else %}
                   -
@@ -79,15 +79,6 @@ Network Difficult: {% if blocks %}{%  with blocks|first as last_block %}{{ last_
     </div>
   </div>
 
-  <div class="card-deck mb-3 text-center">
-    <div class="card mb-4 shadow-sm">
-      <div class="card-body">
-        By donating, you help the development of the explorer and cover maintenance costs:
-          <a href="{% url 'address-detail' 11834991772770337952 %}">BURST-D372-C2DU-HMKK-CQLHA</a> |
-          <a href="{% url 'asset-detail' 14686983107863035136 %}">Buy BurstScan ❤️ Asset</a>
-      </div>
-    </div>
-  </div>
 {% endif %}
 
   <div class="card-deck mb-3 text-center">

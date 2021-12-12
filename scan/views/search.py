@@ -14,7 +14,7 @@ SEARCH_BY = [
     ("Transaction", "id", "/tx/{}"),
 ]
 
-REED_SOLOMON_LENS = {17, 20, 26}
+REED_SOLOMON_LENS = {17, 20, 22}
 
 
 @require_http_methods(["GET"])

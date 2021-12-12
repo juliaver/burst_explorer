@@ -1,3 +1,4 @@
+import struct
 from django.http import Http404
 from django.views.generic import ListView
 
@@ -25,7 +26,6 @@ def fill_data_transaction(obj, list_page=True):
         v, obj.multiout = MultiOutPack().unpack_header(obj.attachment_bytes)
         if not list_page:
             obj.recipients = MultiOut.objects.filter(tx_id=obj.id).all()
-
 
 class TxListView(ListView):
     model = Transaction

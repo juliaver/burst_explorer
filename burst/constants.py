@@ -72,7 +72,8 @@ class TxSubtypeAccountControl:
 
 class TxSubtypeBurstMining:
     REWARD_RECIPIENT_ASSIGNMENT = 0
-
+    ADD_COMMITMENT = 1
+    REMOVE_COMMITMENT = 2
 
 class TxSubtypeAdvancedPayment:
     ESCROW_CREATION = 0

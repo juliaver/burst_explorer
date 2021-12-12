@@ -167,8 +167,8 @@ class ReedSolomon:
         :param cypher_string: The RS encoded address in the form BURST-XXXX-XXXX-XXXX-XXXXX
         :return: The numeric ID of the account
         """
-        if cypher_string[:6] == "BURST-":
-            cypher_string = cypher_string[6:]
+        if cypher_string[:2] == "S-":
+            cypher_string = cypher_string[2:]
 
         cypher_string = cypher_string.replace("-", "")
 

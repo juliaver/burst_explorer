@@ -51,6 +51,12 @@ TX_TYPES = {
     (TxType.BURST_MINING, TxSubtypeBurstMining.REWARD_RECIPIENT_ASSIGNMENT): _(
         "Reward Recipient Assignment"
     ),
+    (TxType.BURST_MINING, TxSubtypeBurstMining.ADD_COMMITMENT): _(
+        "Add Commitment"
+    ),
+    (TxType.BURST_MINING, TxSubtypeBurstMining.REMOVE_COMMITMENT): _(
+        "Remove Commitment"
+    ),
     (TxType.ADVANCED_PAYMENT, TxSubtypeAdvancedPayment.ESCROW_CREATION): _(
         "Escrow Creation"
     ),
